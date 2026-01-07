@@ -11,7 +11,7 @@
 (* ::Text:: *)
 (*------------------------------------*)
 (**)
-(*Version 4.3, 21 November 2025*)
+(*Version 4.4, December 2025*)
 (**)
 (*J. Henriksson, "The critical O(N) CFT:  methods and conformal data". [ https://arxiv.org/abs/2201.09520 ]*)
 (*Github repository: https://github.com/johhen1/ON-model/ *)
@@ -76,6 +76,10 @@
 (*Implemented the non-TS operators of table 15*)
 (*Implemented several new operators*)
 (*Added the critical coupling*)
+(**)
+(*Changes in v4.4 compared to v4.3*)
+(**)
+(*Added result for ONF1 from https://arxiv.org/abs/2512.23539*)
 
 
 (* ::Section::Closed:: *)
@@ -1911,7 +1915,7 @@ DeltaE[IsingF13[k_]]=5+k(1-e/2)+1/18 e (-10-8 k+3 k^2)+ord e^2;
 (*ONF1*)
 
 
-DeltaE[ONF1[k_]]=2k+6k (k-2)/(n+8) e-k((k-1)(34(k-2)(n+8)+(11n^2+92n+212))-(13n+44) (n+2)/2) e^2/(n+8)^3+ord e^3;
+DeltaE[ONF1[k_]]=2k+6k (k-2)/(n+8) e-k((k-1)(34(k-2)(n+8)+(11n^2+92n+212))-(13n+44) (n+2)/2) e^2/(n+8)^3+1/(8 (8+n)^3) e^3 k (3000 k^3+(4 k^2 (-21648+3 n (-312+95 n)+32 (8+n) (26+n) z[3]))/(8+n)+(4 k (200032+11712 n-8028 n^2-766 n^3+9 n^4+144 (8+n) (-102+(-7+n) n) z[3]))/(8+n)^2+(3 (-96256+10784 n+9104 n^2+790 n^3-13 n^4)-32 (8+n) (-872+n (106+37 n)) z[3])/(8+n)^2)+ord e^4;
 
 
 (* ::Text:: *)
