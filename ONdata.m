@@ -11,7 +11,7 @@
 (* ::Text:: *)
 (*------------------------------------*)
 (**)
-(*Version 4.4, December 2025*)
+(*Version 4.5, June 2026*)
 (**)
 (*J. Henriksson, "The critical O(N) CFT:  methods and conformal data". [ https://arxiv.org/abs/2201.09520 ]*)
 (*Github repository: https://github.com/johhen1/ON-model/ *)
@@ -80,6 +80,10 @@
 (*Changes in v4.4 compared to v4.3*)
 (**)
 (*Added result for ONF1 from https://arxiv.org/abs/2512.23539*)
+(**)
+(*Changes in v4.5 compared to v4.4*)
+(**)
+(*Added result for OpeN[Op[S,0,1],Op[S,0,1],Op[S,0,4]] from https://arxiv.org/abs/2606.14733*)
 
 
 (* ::Section::Closed:: *)
@@ -4097,6 +4101,9 @@ OpeN[Op[S,0,1],Op[S,0,1],Op[S,0,2]]=2+ord/n;
 
 
 OpeN[Op[S,0,1],Op[S,0,1],Op[S,0,3]]=(4 (-3+mu))/((-5+mu) mu)+ord/n;
+
+
+OpeN[Op[S,0,1],Op[S,0,1],Op[S,0,4]]=((6 (3-2 mu)^2 (-2+mu) (-1+mu) mu Gamma[-1+2 mu])/((24-17 mu+mu^2)^2 Gamma[1-mu] Gamma[mu]^2 Gamma[1+mu]))/n+ord/n^2;
 
 
 OpeN[Op[S,0,1],Op[S,0,1],Op[S,0,6]]=(18 (-4+mu) (-3+mu)^2)/((-7+mu) (-6+mu) mu (1+mu) (-7+2 mu))+ord/n;
