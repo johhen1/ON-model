@@ -11,7 +11,7 @@
 (* ::Text:: *)
 (*------------------------------------*)
 (**)
-(*Version 4.5, June 2026*)
+(*Version 4.6, September 2026*)
 (**)
 (*J. Henriksson, "The critical O(N) CFT:  methods and conformal data". [ https://arxiv.org/abs/2201.09520 ]*)
 (*Github repository: https://github.com/johhen1/ON-model/ *)
@@ -84,6 +84,13 @@
 (*Changes in v4.5 compared to v4.4*)
 (**)
 (*Added result for OpeN[Op[S,0,1],Op[S,0,1],Op[S,0,4]] from https://arxiv.org/abs/2606.14733*)
+(**)
+(*Changes in v4.6 compared to v4.5*)
+(**)
+(*Added missing results for DeltaN[Op[S,0,7]] and DeltaN[Op[S,0,15]] *)
+(*Corrected expression for OpeN[Op[S,0,1],Op[S,0,1],Op[S,0,1]]*)
+(*Corrected expression for OpeN[Op[S,0,1],Op[S,0,1],Op[S,0,4]]*)
+(*Added missing ord e^2 for DeltaE[ONF9[k]]*)
 
 
 (* ::Section::Closed:: *)
@@ -1975,7 +1982,7 @@ DeltaE[ONF8[l_]]=l+3(1-e/2)+(4+4 (-1)^l+n+l (4+n)+Sqrt[48+16 (-1)^l (1+l)+16 n+(
 (*ONF9*)
 
 
-DeltaE[ONF9[k_]]=2+k(2-e)+(4-12 k+6 k^2+k n)e/(n+8);
+DeltaE[ONF9[k_]]=2+k(2-e)+(4-12 k+6 k^2+k n)e/(n+8)+ord e^2;
 
 
 (* ::Text:: *)
@@ -2119,7 +2126,7 @@ DeltaN[Op[S,0,5]]=4+4(mu-1)+ord/n;
 DeltaN[Op[S,0,6]]=8+ord/n;
 
 
-DeltaN[Op[S,0,7]]=8+ord/n;
+DeltaN[Op[S,0,7]]=8-(2 (-1+2 mu) (60-85 mu+23 mu^2+2 mu^3) Gamma[-1+2 mu])/(3 n Gamma[1-mu] Gamma[mu]^2 Gamma[1+mu])+ord/n^2;
 
 
 DeltaN[Op[S,0,8]]=8-(8 (-1+2 mu) (2-11 mu+6 mu^2) Gamma[-1+2 mu])/(n Gamma[1-mu] Gamma[mu]^2 Gamma[1+mu])+1/n^2 (-((96 (-2+mu)^2 Gamma[-1+2 mu]^2 ((mu (-3+2 mu) (-8+104 mu-383 mu^2+542 mu^3-383 mu^4+104 mu^5))/(12 (-2+mu)^2 (-1+mu))+((-1+mu) mu (-3+2 mu)^2 (12+16 (-3+mu)-5 mu+mu^2) (-1+4 mu^2))/(3 (2-mu) (3-mu) (12-7 mu-mu^2+16 (-3+2 mu)))+1/(2 (-2+mu)^2) (-1+mu) mu^2 (-12+52 mu-51 mu^2+15 mu^3) (\[Pi]^2/6-PolyGamma[1,-1+mu])))/(Gamma[1-mu]^2 Gamma[mu]^4 Gamma[1+mu]^2))-(16 (-1+mu) Gamma[-1+2 mu]^2 (2 (1-2 mu)^2+mu (34+8/(-2+mu)-3/(-1+mu)^2+4/(-1+mu)+2/((-1+mu) mu^2)-2 mu+4 mu^2-1/((-1+mu) mu) 2 (-2+6 mu+5 mu^2-12 mu^3+4 mu^4) (-1+EulerGamma+PolyGamma[0,2-mu]-PolyGamma[0,-2+mu]+PolyGamma[0,-2+2 mu])+3 mu (-11+8 mu) (-(\[Pi]^2/6)+PolyGamma[1,-1+mu])+1/(2-mu) 2 (3-2 mu)^2 mu (-((7 \[Pi]^2)/6)-(EulerGamma+PolyGamma[0,2-mu]-PolyGamma[0,-1+mu]+PolyGamma[0,-3+2 mu])^2+PolyGamma[1,2-mu]+7 PolyGamma[1,-1+mu]-PolyGamma[1,-3+2 mu]))))/(Gamma[1-mu]^2 Gamma[mu]^4 Gamma[1+mu]^2)+(48 Gamma[-1+2 mu]^2 ((-1+mu) (2 (1-2 mu)^2+mu (34+8/(-2+mu)-3/(-1+mu)^2+4/(-1+mu)+2/((-1+mu) mu^2)-2 mu+4 mu^2-1/((-1+mu) mu) 2 (-2+6 mu+5 mu^2-12 mu^3+4 mu^4) (-1+EulerGamma+PolyGamma[0,2-mu]-PolyGamma[0,-2+mu]+PolyGamma[0,-2+2 mu])+3 mu (-11+8 mu) (-(\[Pi]^2/6)+PolyGamma[1,-1+mu])+1/(2-mu) 2 (3-2 mu)^2 mu (-((7 \[Pi]^2)/6)-(EulerGamma+PolyGamma[0,2-mu]-PolyGamma[0,-1+mu]+PolyGamma[0,-3+2 mu])^2+PolyGamma[1,2-mu]+7 PolyGamma[1,-1+mu]-PolyGamma[1,-3+2 mu])))+((864-8208 mu+26280 mu^2+43444 mu^3-460364 mu^4+1320318 mu^5-2194071 mu^6+2447910 mu^7-1936168 mu^8+1105060 mu^9-452961 mu^10+130032 mu^11-24792 mu^12+2816 mu^13-144 mu^14)/(3 mu-5 mu^2+2 mu^3)+(16 (3-2 mu)^2 (-2+mu) mu Gamma[1-mu] Gamma[mu]^2 Gamma[1+mu])/Gamma[-1+2 mu]+2 (-2+mu) (-144+672 mu+2756 mu^2-14508 mu^3+26111 mu^4-25804 mu^5+15861 mu^6-6316 mu^7+1608 mu^8-240 mu^9+16 mu^10) (EulerGamma+PolyGamma[0,3-mu]-PolyGamma[0,-1+mu]+PolyGamma[0,-3+2 mu])+3 (-3+mu) (-2+mu)^2 (-1+mu) mu^2 (-216+566 mu-549 mu^2+241 mu^3-48 mu^4+4 mu^5) (-(\[Pi]^2/6)+PolyGamma[1,-1+mu])+8 (3-2 mu)^2 (-3+mu) (-2+mu)^2 (-1+mu) mu^2 (5-5 mu+mu^2) (\[Pi]^2/6+(EulerGamma+PolyGamma[0,3-mu]-PolyGamma[0,-1+mu]+PolyGamma[0,-3+2 mu])^2-PolyGamma[1,3-mu]-PolyGamma[1,-1+mu]+PolyGamma[1,-3+2 mu]))/(2 (-3+mu)^2 (-2+mu)^3)))/(Gamma[1-mu]^2 Gamma[mu]^4 Gamma[1+mu]^2))+ord/n^3;
@@ -2143,7 +2150,7 @@ DeltaN[Op[S,0,13]]=10+ord/n;
 DeltaN[Op[S,0,14]]=10+ord/n;
 
 
-DeltaN[Op[S,0,15]]=10+ord/n;
+DeltaN[Op[S,0,15]]=10-(2 (-1+2 mu) (78-147 mu+55 mu^2+2 mu^3) Gamma[-1+2 mu])/(3 n Gamma[1-mu] Gamma[mu]^2 Gamma[1+mu])+ord/n^2;
 
 
 DeltaN[Op[S,0,16]]=10-(10 ((-1+2 mu) (2-14 mu+8 mu^2) Gamma[-1+2 mu]))/((Gamma[1-mu] Gamma[mu]^2 Gamma[1+mu]) n)+1/n^2 (-(1/(Gamma[1-mu]^2 Gamma[mu]^4 Gamma[1+mu]^2))240 (-2+mu)^2 Gamma[-1+2 mu]^2 ((mu (-3+2 mu) (-8+104 mu-383 mu^2+542 mu^3-383 mu^4+104 mu^5))/(12 (-2+mu)^2 (-1+mu))+((-1+mu) mu (-3+2 mu)^2 (12+20 (-3+mu)-5 mu+mu^2) (-1+4 mu^2))/(3 (2-mu) (3-mu) (12-7 mu-mu^2+20 (-3+2 mu)))+((-1+mu) mu^2 (-12+52 mu-51 mu^2+15 mu^3) (\[Pi]^2/6-PolyGamma[1,-1+mu]))/(2 (-2+mu)^2))-1/(Gamma[1-mu]^2 Gamma[mu]^4 Gamma[1+mu]^2) 20 (-1+mu) Gamma[-1+2 mu]^2 (2 (1-2 mu)^2+mu (34+8/(-2+mu)-3/(-1+mu)^2+4/(-1+mu)+2/((-1+mu) mu^2)-2 mu+4 mu^2-(2 (-2+6 mu+5 mu^2-12 mu^3+4 mu^4) (-1+EulerGamma+PolyGamma[0,2-mu]-PolyGamma[0,-2+mu]+PolyGamma[0,-2+2 mu]))/((-1+mu) mu)+3 mu (-11+8 mu) (-(\[Pi]^2/6)+PolyGamma[1,-1+mu])+1/(2-mu) 2 (3-2 mu)^2 mu (-((7 \[Pi]^2)/6)-(EulerGamma+PolyGamma[0,2-mu]-PolyGamma[0,-1+mu]+PolyGamma[0,-3+2 mu])^2+PolyGamma[1,2-mu]+7 PolyGamma[1,-1+mu]-PolyGamma[1,-3+2 mu])))+1/(Gamma[1-mu]^2 Gamma[mu]^4 Gamma[1+mu]^2) 80 Gamma[-1+2 mu]^2 ((-1+mu) (2 (1-2 mu)^2+mu (34+8/(-2+mu)-3/(-1+mu)^2+4/(-1+mu)+2/((-1+mu) mu^2)-2 mu+4 mu^2-(2 (-2+6 mu+5 mu^2-12 mu^3+4 mu^4) (-1+EulerGamma+PolyGamma[0,2-mu]-PolyGamma[0,-2+mu]+PolyGamma[0,-2+2 mu]))/((-1+mu) mu)+3 mu (-11+8 mu) (-(\[Pi]^2/6)+PolyGamma[1,-1+mu])+1/(2-mu) 2 (3-2 mu)^2 mu (-((7 \[Pi]^2)/6)-(EulerGamma+PolyGamma[0,2-mu]-PolyGamma[0,-1+mu]+PolyGamma[0,-3+2 mu])^2+PolyGamma[1,2-mu]+7 PolyGamma[1,-1+mu]-PolyGamma[1,-3+2 mu])))+1/(2 (-3+mu)^2 (-2+mu)^3) (1/(3 mu-5 mu^2+2 mu^3) (864-8208 mu+26280 mu^2+43444 mu^3-460364 mu^4+1320318 mu^5-2194071 mu^6+2447910 mu^7-1936168 mu^8+1105060 mu^9-452961 mu^10+130032 mu^11-24792 mu^12+2816 mu^13-144 mu^14)+(16 (3-2 mu)^2 (-2+mu) mu Gamma[1-mu] Gamma[mu]^2 Gamma[1+mu])/Gamma[-1+2 mu]+2 (-2+mu) (-144+672 mu+2756 mu^2-14508 mu^3+26111 mu^4-25804 mu^5+15861 mu^6-6316 mu^7+1608 mu^8-240 mu^9+16 mu^10) (EulerGamma+PolyGamma[0,3-mu]-PolyGamma[0,-1+mu]+PolyGamma[0,-3+2 mu])+3 (-3+mu) (-2+mu)^2 (-1+mu) mu^2 (-216+566 mu-549 mu^2+241 mu^3-48 mu^4+4 mu^5) (-(\[Pi]^2/6)+PolyGamma[1,-1+mu])+8 (3-2 mu)^2 (-3+mu) (-2+mu)^2 (-1+mu) mu^2 (5-5 mu+mu^2) (\[Pi]^2/6+(EulerGamma+PolyGamma[0,3-mu]-PolyGamma[0,-1+mu]+PolyGamma[0,-3+2 mu])^2-PolyGamma[1,3-mu]-PolyGamma[1,-1+mu]+PolyGamma[1,-3+2 mu]))))+ord/n^3;
@@ -4094,7 +4101,7 @@ OpeN[Op[S,0,1],Op[S,0,1],ONF7[l_]]=(2 Gamma[2+l]^2 Gamma[3+l])/(Gamma[1+l] Gamma
 (*Of three O(N) operators*)
 
 
-OpeN[Op[S,0,1],Op[S,0,1],Op[S,0,1]]=(4 (-1+mu) mu (-3+2 mu)^2 Gamma[-1+2 mu] (1+1/n 2 ((6 (-2+mu) (-2+2 mu) (-1+2 mu) Gamma[-1+2 mu] (-(2/(-4+2 mu))+\[Pi] Cot[mu \[Pi]]+HarmonicNumber[-4+2 mu]))/((-4+2 mu) Gamma[1-mu] Gamma[mu]^2 Gamma[1+mu])+(3 (-2+mu) Gamma[-1+2 mu] (3-4 mu+16/(-4+2 mu)^2+6/(-4+2 mu)+2/(-2+2 mu)+1/(4-2 mu) (4+2 mu (-3+2 mu)) (\[Pi] Cot[mu \[Pi]]+HarmonicNumber[-3+2 mu])))/(Gamma[1-mu] Gamma[mu]^2 Gamma[1+mu])+(6 (-2+mu) mu (-2+2 mu) Gamma[-1+2 mu] (\[Pi]^2-6 PolyGamma[1,1/2 (-2+2 mu)]))/(Gamma[1-mu] Gamma[mu]^2 Gamma[1+mu])+(4 (-2+mu) mu (-3+2 mu) (-2+2 mu) Gamma[-1+2 mu] (-(\[Pi]^2/6)-HarmonicNumber[-4+2 mu] (2 \[Pi] Cot[mu \[Pi]]+HarmonicNumber[-4+2 mu])-PolyGamma[1,-3+2 mu]+6 PolyGamma[1,1/2 (-2+2 mu)]))/((-4+2 mu)^2 Gamma[1-mu] Gamma[mu]^2 Gamma[1+mu]))))/((-2+mu) n Gamma[1-mu] Gamma[mu]^2 Gamma[1+mu])+ord/n^3;
+OpeN[Op[S,0,1],Op[S,0,1],Op[S,0,1]]=(4 (-1+mu) mu (-3+2 mu)^2 Gamma[-1+2 mu] (1+1/n 2 ((6 (-2+mu) (-2+2 mu) (-1+2 mu) Gamma[-1+2 mu] (-(2/(-4+2 mu))+\[Pi] Cot[mu \[Pi]]+HarmonicNumber[-4+2 mu]))/((-4+2 mu) Gamma[1-mu] Gamma[mu]^2 Gamma[1+mu])+(3 (-2+mu) Gamma[-1+2 mu] (3-4 mu+16/(-4+2 mu)^2+6/(-4+2 mu)+2/(-2+2 mu)+1/(4-2 mu) (4+2 mu (-3+2 mu)) (\[Pi] Cot[mu \[Pi]]+HarmonicNumber[-3+2 mu])))/(Gamma[1-mu] Gamma[mu]^2 Gamma[1+mu])+(3 mu (-2+2 mu) Gamma[-1+2 mu] (\[Pi]^2-6 PolyGamma[1,1/2 (-2+2 mu)]))/(4 Gamma[1-mu] Gamma[mu]^2 Gamma[1+mu])+(4 (-2+mu) mu (-3+2 mu) (-2+2 mu) Gamma[-1+2 mu] (-(\[Pi]^2/6)-HarmonicNumber[-4+2 mu] (2 \[Pi] Cot[mu \[Pi]]+HarmonicNumber[-4+2 mu])-PolyGamma[1,-3+2 mu]+6 PolyGamma[1,1/2 (-2+2 mu)]))/((-4+2 mu)^2 Gamma[1-mu] Gamma[mu]^2 Gamma[1+mu]))))/((-2+mu) n Gamma[1-mu] Gamma[mu]^2 Gamma[1+mu])+ord/n^3;
 
 
 OpeN[Op[S,0,1],Op[S,0,1],Op[S,0,2]]=2+ord/n;
@@ -4103,7 +4110,7 @@ OpeN[Op[S,0,1],Op[S,0,1],Op[S,0,2]]=2+ord/n;
 OpeN[Op[S,0,1],Op[S,0,1],Op[S,0,3]]=(4 (-3+mu))/((-5+mu) mu)+ord/n;
 
 
-OpeN[Op[S,0,1],Op[S,0,1],Op[S,0,4]]=((6 (3-2 mu)^2 (-2+mu) (-1+mu) mu Gamma[-1+2 mu])/((24-17 mu+mu^2)^2 Gamma[1-mu] Gamma[mu]^2 Gamma[1+mu]))/n+ord/n^2;
+OpeN[Op[S,0,1],Op[S,0,1],Op[S,0,4]]=((96 (3-2 mu)^2 (-2+mu) (-1+mu) mu Gamma[-1+2 mu])/((24-17 mu+mu^2)^2 Gamma[1-mu] Gamma[mu]^2 Gamma[1+mu]))/n+ord/n^2;
 
 
 OpeN[Op[S,0,1],Op[S,0,1],Op[S,0,6]]=(18 (-4+mu) (-3+mu)^2)/((-7+mu) (-6+mu) mu (1+mu) (-7+2 mu))+ord/n;
